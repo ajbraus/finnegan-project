@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  .col-sm-8
+    h3 Once upon a time...
+    each val in story
+      span.sentence= val
+  .col-sm-4
+    nav
+      form(action="/sentences")
+        textarea#sentence-edit.form-control
+        .text-right
+          button.btn-default(type="submit") Save
+    hr
+    nav
+      ul
+        li 
+          #[b edited] "something"
+        li 
+          #[b deleted] "something"
+        li 
+          #[b added] "something"
