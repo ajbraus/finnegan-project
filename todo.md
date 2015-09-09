@@ -1,4 +1,7 @@
 story is an array of sentences.
+paragraphs
+moving sentences around
+
 
 Edit the sentences
 Start a new sentence

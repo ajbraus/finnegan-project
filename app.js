@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var sentences = require('./routes/sentences');
 
 var app = express();
 var server = require('http').Server(app);
@@ -34,9 +35,8 @@ io.on('connection', function (socket) {
 server.listen(8080)
 
 app.use('/', routes);
-app.use('/sentences', routes);
-// app.use('/users', users);
-
+app.use('/sentences', sentences);
+app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
